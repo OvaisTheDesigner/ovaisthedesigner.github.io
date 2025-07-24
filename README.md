@@ -1,246 +1,179 @@
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ovais | Web Designer Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ovais | Web Designer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary: #1F2937;
-      --secondary: #4B5563;
-      --accent: #10B981;
-      --background: #F9FAFB;
-      --font-heading: 'Playfair Display', serif;
-      --font-body: 'Inter', sans-serif;
+      --primary-color: #2c3e50;
+      --secondary-color: #f4f6f8;
+      --accent-color: #0077b6;
+      --text-color: #333;
     }
-
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
-
     body {
-      font-family: var(--font-body);
-      background: var(--background);
-      color: var(--primary);
+      font-family: 'Inter', sans-serif;
+      background-color: var(--secondary-color);
+      color: var(--text-color);
       line-height: 1.6;
-      overflow-x: hidden;
     }
-
-    section, footer, header {
-      padding: 4rem 2rem;
-      max-width: 1200px;
-      margin: auto;
-      opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.6s ease-out;
-    }
-
-    section.visible, footer.visible, header.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
     h1, h2, h3 {
-      font-family: var(--font-heading);
+      font-family: 'Playfair Display', serif;
+      color: var(--primary-color);
+      text-align: center;
       margin-bottom: 1rem;
+    }
+    section {
+      padding: 4rem 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+      animation: fadeInUp 1s ease both;
+    }
+    .hero {
       text-align: center;
+      background: linear-gradient(to bottom, #e8f0f6, #ffffff);
+      padding: 6rem 2rem;
     }
-
-    h1 {
-      font-size: 3.2rem;
+    .hero h1 {
+      font-size: 3rem;
     }
-
-    h2 {
-      font-size: 2.4rem;
-      color: var(--accent);
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 1rem auto 2rem;
     }
-
-    .btn {
-      background: var(--accent);
-      color: #fff;
-      padding: 0.75rem 1.5rem;
+    .cta-button {
+      padding: 0.75rem 2rem;
+      background-color: var(--accent-color);
+      color: white;
       border: none;
-      border-radius: 6px;
+      border-radius: 5px;
+      font-size: 1rem;
       cursor: pointer;
-      font-weight: 600;
-      text-decoration: none;
-      display: inline-block;
-      margin-top: 1rem;
     }
-
-    .centered {
-      text-align: center;
-    }
-
-    .grid {
+    .reviews-grid, .projects-grid {
       display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 2rem;
     }
-
-    .project, .service, .review, .price-card {
-      background: #fff;
+    .card {
+      background: white;
       padding: 1.5rem;
       border-radius: 10px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-      transition: transform 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
-
-    .project:hover, .service:hover, .review:hover, .price-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .grid-2 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
-    .grid-3 { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
-
-    .project img, .review img {
-      width: 100%;
-      border-radius: 6px;
-      margin-top: 1rem;
-    }
-
-    .contact form {
-      display: flex;
-      flex-direction: column;
-      max-width: 600px;
-      margin: auto;
-    }
-
-    .contact input, .contact textarea {
-      padding: 0.75rem;
-      margin-bottom: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 1rem;
-    }
-
     footer {
+      background: var(--primary-color);
+      color: white;
       text-align: center;
-      font-size: 0.9rem;
+      padding: 2rem;
+    }
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
 <body>
 
-  <header class="hero centered">
-    <h1>Ovais – Shopify Web Designer</h1>
-    <p>I build high-converting, professional Shopify websites that grow your business.</p>
-    <a href="#contact" class="btn">Get Your Website</a>
-  </header>
+  <section class="hero">
+    <h1>Ovais – Professional Web Designer</h1>
+    <p>I help brands and businesses build clean, modern, and high-converting websites using Shopify & custom design tools.</p>
+    <button class="cta-button">Let’s Work Together</button>
+  </section>
 
-  <section class="about">
+  <section id="about">
     <h2>About Me</h2>
-    <p class="centered">I’m Ovais, a professional Shopify web designer with a passion for clean, modern design and smart digital strategies. I help international businesses build online stores that look great and convert customers.</p>
+    <p>I’m Ovais, a creative web designer specializing in modern, responsive, and user-friendly websites. With experience in Shopify, Figma, and UX/UI design principles, I help businesses establish a strong digital presence and attract international clients.</p>
+    <p>Skills: Shopify, Responsive Design, Figma, UX/UI, Branding, Conversion Optimization.</p>
   </section>
 
-  <section class="projects">
+  <section id="projects">
     <h2>Featured Projects</h2>
-    <div class="grid grid-2">
-      <div class="project">
-        <h3>Modern Home Decor</h3>
-        <p>Shopify website for an international home decor brand, focused on clean navigation and conversion-friendly layout.</p>
-        <img src="https://via.placeholder.com/800x400" alt="Project Screenshot">
+    <div class="projects-grid">
+      <div class="card">
+        <h3>Furniture Store</h3>
+        <p>Modern, minimalist layout to enhance product showcase and trust elements.</p>
       </div>
-      <div class="project">
-        <h3>Fitness Gear Store</h3>
-        <p>A bold, energetic design for a fitness product brand targeting European markets.</p>
-        <img src="https://via.placeholder.com/800x400" alt="Project Screenshot">
+      <div class="card">
+        <h3>Clothing Brand</h3>
+        <p>Conversion-focused homepage design, mobile optimization, and brand identity.</p>
       </div>
     </div>
   </section>
 
-  <section class="services">
+  <section id="services">
     <h2>What I Offer</h2>
-    <div class="grid grid-3">
-      <div class="service">
-        <h3>Shopify Design</h3>
-        <p>Custom Shopify storefronts optimized for trust, speed, and conversions.</p>
+    <ul>
+      <li>Custom Shopify Website Design</li>
+      <li>Conversion Optimization</li>
+      <li>Landing Page Design</li>
+      <li>Responsive Mobile Design</li>
+      <li>UX Strategy & Wireframes</li>
+    </ul>
+  </section>
+
+  <section id="reviews">
+    <h2>Client Reviews</h2>
+    <div class="reviews-grid">
+      <div class="card">
+        <p>"Ovais did an amazing job on my site. Clean, professional, and fast! Highly recommended."</p>
+        <strong>— Sarah L., US</strong>
       </div>
-      <div class="service">
-        <h3>Landing Pages</h3>
-        <p>Focused, high-converting landing pages for product launches or campaigns.</p>
+      <div class="card">
+        <p>"He redesigned our Shopify store and conversions went up immediately. Great experience."</p>
+        <strong>— Ahmed M., UK</strong>
       </div>
-      <div class="service">
-        <h3>Support Plans</h3>
-        <p>Ongoing updates, tweaks, and priority support for your site.</p>
+      <div class="card">
+        <p>"Impressive work ethic and creative vision. I'll definitely work again with Ovais."</p>
+        <strong>— Julia R., Germany</strong>
       </div>
     </div>
   </section>
 
-  <section class="reviews">
-    <h2>Client Testimonials</h2>
-    <div class="grid grid-2">
-      <div class="review">
-        <p>“Ovais turned our messy online store into a beautiful, professional platform. Our sales increased 40%!”</p>
-        <strong>— Emily, UK</strong>
-      </div>
-      <div class="review">
-        <p>“He really understood our brand and made something better than we imagined.”</p>
-        <strong>— Daniel, Germany</strong>
-      </div>
-      <div class="review">
-        <p>“Super smooth communication, reliable, and very creative. Highly recommend.”</p>
-        <strong>— Fatima, UAE</strong>
-      </div>
-    </div>
-  </section>
-
-  <section class="pricing">
-    <h2>Packages</h2>
-    <div class="grid grid-3">
-      <div class="price-card">
+  <section id="pricing">
+    <h2>Pricing</h2>
+    <div class="projects-grid">
+      <div class="card">
         <h3>Starter</h3>
-        <p>$300 – 1 Page Landing</p>
-        <p>Perfect for simple campaigns or launches.</p>
+        <p>$299 – One-page design, mobile-friendly, fast delivery.</p>
       </div>
-      <div class="price-card">
+      <div class="card">
         <h3>Business</h3>
-        <p>$750 – 4 Pages</p>
-        <p>Ideal for growing brands needing a solid foundation.</p>
+        <p>$599 – Up to 5 pages, brand styling, optimization, contact form.</p>
       </div>
-      <div class="price-card">
+      <div class="card">
         <h3>Pro</h3>
-        <p>$1500 – 7+ Pages + Custom Features</p>
-        <p>Tailored for international brands with scaling needs.</p>
+        <p>$999+ – Custom Shopify store, animations, SEO setup, and support.</p>
       </div>
     </div>
   </section>
 
-  <section class="contact" id="contact">
-    <h2>Let’s Work Together</h2>
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Ready to take your brand online professionally? Let's talk!</p>
     <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Tell me about your project..." rows="5" required></textarea>
-      <button class="btn" type="submit">Send Message</button>
+      <input type="text" placeholder="Your Name" required><br><br>
+      <input type="email" placeholder="Your Email" required><br><br>
+      <textarea placeholder="Your Message" rows="5" required></textarea><br><br>
+      <button class="cta-button" type="submit">Send Message</button>
     </form>
-    <div class="centered">
-      <p>Email: <a href="mailto:hello@ovaisthedesigner.com">hello@ovaisthedesigner.com</a></p>
-      <p>Instagram: <a href="https://instagram.com/OvaisTheDesigner" target="_blank">@OvaisTheDesigner</a></p>
-    </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 Ovais – All rights reserved.</p>
-    <p><a href="#">Privacy Policy</a> | <a href="#">Terms</a></p>
+    <p>© 2025 Ovais. All rights reserved. | Designed by OvaisTheDesigner</p>
   </footer>
 
-  <script>
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, {
-      threshold: 0.1
-    });
-
-    document.querySelectorAll('section, header, footer').forEach(section => {
-      observer.observe(section);
-    });
-  </script>
 </body>
 </html>
