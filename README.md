@@ -1,220 +1,184 @@
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ovais The Designer - Web Designer Portfolio</title>
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Link to your custom CSS file -->
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ovais | Web Designer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #1a1a1a;
+      --secondary-color: #ffffff;
+      --accent-color: #005f73;
+      --text-color: #222;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--secondary-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      color: var(--primary-color);
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    section {
+      padding: 4rem 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+      animation: fadeInUp 1s ease both;
+    }
+    .hero {
+      text-align: center;
+      background: linear-gradient(to bottom, #f0f4f8, #ffffff);
+      padding: 6rem 2rem;
+    }
+    .hero h1 {
+      font-size: 3rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 1rem auto 2rem;
+    }
+    .cta-button {
+      padding: 0.75rem 2rem;
+      background-color: var(--accent-color);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .reviews-grid, .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+    .card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+    footer {
+      background: var(--primary-color);
+      color: white;
+      text-align: center;
+      padding: 2rem;
+    }
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <!-- Header Section: Logo and Navigation -->
-    <header>
-        <nav>
-            <div class="logo">OvaisTheDesigner</div>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#reviews">Reviews</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <section class="hero">
+    <h1>Ovais – Professional Web Designer</h1>
+    <p>I design clean, modern Shopify websites that are built to convert. Elevate your online presence with a site that truly represents your brand.</p>
+    <button class="cta-button">Let’s Work Together</button>
+  </section>
 
-    <main>
-        <!-- Hero Section: Welcoming message and call to action -->
-        <section id="hero" class="hero-section">
-            <div class="hero-content">
-                <h1>Hi, I'm Ovais,</h1>
-                <p>A passionate Web Designer bringing your digital visions to life.</p>
-                <a href="#projects" class="btn">View My Work</a>
-            </div>
-        </section>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hey, I’m Ovais – a professional web designer helping brands thrive online through smart, user-centered design. I specialize in Shopify, Figma, and mobile-first UX principles to build websites that not only look great, but also perform exceptionally well.</p>
+    <p>I’ve worked with growing businesses from Pakistan to the UK, helping them attract more customers through impactful digital experiences.</p>
+    <p><strong>Skills:</strong> Shopify, Figma, Mobile Design, UX/UI, Conversion-Focused Layouts, Brand Identity, Wireframes, and Modern Styling.</p>
+  </section>
 
-        <!-- About Section: Who you are and your skills -->
-        <section id="about" class="about-section">
-            <div class="container">
-                <h2>About Me</h2>
-                <div class="about-content">
-                    <div class="about-image">
-                        <!-- Placeholder image for your profile picture -->
-                        <img src="https://placehold.co/400x400/e74c3c/ffffff?text=Your+Photo" alt="Ovais The Designer Profile Picture">
-                    </div>
-                    <div class="about-text">
-                        <p>Hello! I'm Ovais, a dedicated web designer with a keen eye for detail and a passion for creating beautiful, user-friendly, and highly functional websites. I specialize in crafting engaging online experiences that effectively communicate your brand's message.</p>
-                        <h3>My Skills:</h3>
-                        <ul>
-                            <li>HTML5, CSS3, JavaScript</li>
-                            <li>Responsive Web Design</li>
-                            <li>UI/UX Design Principles</li>
-                            <li>Wireframing & Prototyping</li>
-                            <li>Graphic Design (e.g., Photoshop, Figma)</li>
-                            <li>Frontend Frameworks (e.g., React, Vue - if applicable, add your specific frameworks)</li>
-                            <li>SEO Best Practices</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
+  <section id="projects">
+    <h2>Featured Projects</h2>
+    <div class="projects-grid">
+      <div class="card">
+        <h3>Furniture Store</h3>
+        <p>Modern, minimalist layout with strong trust-building elements and seamless navigation.</p>
+      </div>
+      <div class="card">
+        <h3>Clothing Brand</h3>
+        <p>Mobile-optimized fashion site with bold visuals and a clean user journey focused on sales.</p>
+      </div>
+    </div>
+  </section>
 
-        <!-- Projects Section: Showcase your best works -->
-        <section id="projects" class="projects-section">
-            <div class="container">
-                <h2>My Best Work</h2>
-                <div class="project-grid">
-                    <!-- Project Item 1 -->
-                    <div class="project-item">
-                        <!-- Placeholder image for Project 1 -->
-                        <img src="https://placehold.co/600x400/2c3e50/ffffff?text=Project+1+Image" alt="Project 1 Thumbnail">
-                        <h3>Project Title One</h3>
-                        <p>A brief description of this project, highlighting your role and the technologies used. Focus on the impact and results. This could be an e-commerce site, a blog, or a corporate website.</p>
-                        <a href="#" target="_blank" class="project-link">View Project <i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                    <!-- Project Item 2 -->
-                    <div class="project-item">
-                        <!-- Placeholder image for Project 2 -->
-                        <img src="https://placehold.co/600x400/2c3e50/ffffff?text=Project+2+Image" alt="Project 2 Thumbnail">
-                        <h3>Project Title Two</h3>
-                        <p>Another brief description, showcasing a different skill or type of project. Perhaps a portfolio site for an artist or a landing page for a startup.</p>
-                        <a href="#" target="_blank" class="project-link">View Project <i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                    <!-- Project Item 3 -->
-                    <div class="project-item">
-                        <!-- Placeholder image for Project 3 -->
-                        <img src="https://placehold.co/600x400/2c3e50/ffffff?text=Project+3+Image" alt="Project 3 Thumbnail">
-                        <h3>Project Title Three</h3>
-                        <p>Description for your third project, emphasizing its unique aspects, such as custom animations or complex data visualization.</p>
-                        <a href="#" target="_blank" class="project-link">View Project <i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                    <!-- Project Item 4 (Optional, but good to have 3-4) -->
-                    <div class="project-item">
-                        <!-- Placeholder image for Project 4 -->
-                        <img src="https://placehold.co/600x400/2c3e50/ffffff?text=Project+4+Image" alt="Project 4 Thumbnail">
-                        <h3>Project Title Four</h3>
-                        <p>Description for your fourth project, demonstrating your versatility, maybe a redesign project or a mobile-first application.</p>
-                        <a href="#" target="_blank" class="project-link">View Project <i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-            </div>
-        </section>
+  <section id="services">
+    <h2>What I Offer</h2>
+    <ul>
+      <li>Custom Shopify Website Design</li>
+      <li>Conversion Optimization</li>
+      <li>Landing Page Design</li>
+      <li>Responsive Mobile Design</li>
+      <li>UX Strategy & Wireframes</li>
+    </ul>
+  </section>
 
-        <!-- Services Section: What you offer -->
-        <section id="services" class="services-section">
-            <div class="container">
-                <h2>What I Offer</h2>
-                <div class="service-grid">
-                    <div class="service-item">
-                        <i class="fas fa-desktop"></i>
-                        <h3>Custom Website Design</h3>
-                        <p>Crafting unique and visually appealing websites tailored to your brand's identity and goals, ensuring a strong online presence.</p>
-                    </div>
-                    <div class="service-item">
-                        <i class="fas fa-mobile-alt"></i>
-                        <h3>Responsive Development</h3>
-                        <p>Ensuring your website looks and functions perfectly on all devices, from large desktop monitors to tablets and smartphones.</p>
-                    </div>
-                    <div class="service-item">
-                        <i class="fas fa-palette"></i>
-                        <h3>UI/UX Optimization</h3>
-                        <p>Designing intuitive interfaces and engaging user experiences that lead to higher conversions and customer satisfaction.</p>
-                    </div>
-                    <div class="service-item">
-                        <i class="fas fa-code"></i>
-                        <h3>Frontend Development</h3>
-                        <p>Bringing designs to life with clean, efficient, and semantic HTML, CSS, and JavaScript code for robust and scalable solutions.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+  <section id="reviews">
+    <h2>Client Reviews</h2>
+    <div class="reviews-grid">
+      <div class="card">
+        <p>“Ovais turned my idea into a live store that looks amazing and sells well. Smooth process!”</p>
+        <strong>— Fatima K., UAE</strong>
+      </div>
+      <div class="card">
+        <p>“Very professional and talented. The site looks premium and performs better than our old one.”</p>
+        <strong>— Hassan R., Pakistan</strong>
+      </div>
+      <div class="card">
+        <p>“Great design sense and fast turnaround. Ovais delivered more than expected!”</p>
+        <strong>— Leah P., Australia</strong>
+      </div>
+      <div class="card">
+        <p>“Super happy with the service. I loved the way he communicated and refined the site until perfect.”</p>
+        <strong>— Kamal D., Canada</strong>
+      </div>
+    </div>
+  </section>
 
-        <!-- Reviews Section: Testimonials from clients -->
-        <section id="reviews" class="reviews-section">
-            <div class="container">
-                <h2>What Clients Say</h2>
-                <div class="review-grid">
-                    <!-- Review 1 -->
-                    <div class="review-item">
-                        <p>"Ovais delivered an outstanding website that perfectly captured our vision. His attention to detail and communication were excellent throughout the project!"</p>
-                        <h4>- Sarah J.</h4>
-                        <span>Marketing Manager, Tech Solutions Inc.</span>
-                    </div>
-                    <!-- Review 2 -->
-                    <div class="review-item">
-                        <p>"Professional, creative, and highly skilled. Ovais made the entire process smooth and enjoyable. Our new site is exactly what we needed. Highly recommend!"</p>
-                        <h4>- Mark T.</h4>
-                        <span>Small Business Owner, Green Living Co.</span>
-                    </div>
-                    <!-- Review 3 -->
-                    <div class="review-item">
-                        <p>"Our new website is a game-changer for our business, all thanks to Ovais. He exceeded our expectations in every way, delivering on time and within budget."</p>
-                        <h4>- Emily R.</h4>
-                        <span>CEO, Innovate Startups</span>
-                    </div>
-                    <!-- Review 4 (Optional) -->
-                    <div class="review-item">
-                        <p>"Fantastic work! Ovais is truly talented and understands client needs exceptionally well. We're thrilled with the outcome and the positive feedback we've received."</p>
-                        <h4>- David L.</h4>
-                        <span>Creative Director, Art Gallery X</span>
-                    </div>
-                </div>
-            </div>
-        </section>
+  <section id="pricing">
+    <h2>Pricing</h2>
+    <div class="projects-grid">
+      <div class="card">
+        <h3>Starter</h3>
+        <p>$299 – One-page design, mobile-friendly, fast delivery.</p>
+      </div>
+      <div class="card">
+        <h3>Business</h3>
+        <p>$599 – Up to 5 pages, brand styling, optimization, contact form.</p>
+      </div>
+      <div class="card">
+        <h3>Pro</h3>
+        <p>$999+ – Custom Shopify store, animations, SEO setup, and support.</p>
+      </div>
+    </div>
+  </section>
 
-        <!-- Contact Section: Contact form and social links -->
-        <section id="contact" class="contact-section">
-            <div class="container">
-                <h2>Get in Touch</h2>
-                <div class="contact-content">
-                    <div class="contact-form-container">
-                        <!-- Formspree Integration: Replace 'yourformid' with your actual Formspree form ID -->
-                        <form id="contactForm" action="https://formspree.io/f/yourformid" method="POST">
-                            <p>Have a project in mind or just want to say hello? Fill out the form below!</p>
-                            <div class="form-group">
-                                <label for="name">Name:</label>
-                                <input type="text" id="name" name="name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email:</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Message:</label>
-                                <textarea id="message" name="message" rows="6" required></textarea>
-                            </div>
-                            <button type="submit" class="btn">Send Message</button>
-                            <p id="formStatus" class="form-status"></p>
-                        </form>
-                    </div>
-                    <div class="contact-details">
-                        <h3>Connect with Me:</h3>
-                        <p><i class="fas fa-envelope"></i> Email: <a href="mailto:ovaisthedesigner@gmail.com">ovaisthedesigner@gmail.com</a></p>
-                        <p><i class="fab fa-instagram"></i> Instagram: <a href="https://instagram.com/OvaisTheDesigner" target="_blank">@OvaisTheDesigner</a></p>
-                        <!-- Add other social links as needed, replace '#' with your actual links -->
-                        <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="#" target="_blank">Your LinkedIn Profile</a></p>
-                        <p><i class="fab fa-github"></i> GitHub: <a href="#" target="_blank">Your GitHub Profile</a></p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Have a project in mind? Let’s discuss how I can bring your vision to life.</p>
+    <form>
+      <input type="text" placeholder="Your Name" required><br><br>
+      <input type="email" placeholder="Your Email" required><br><br>
+      <textarea placeholder="Your Message" rows="5" required></textarea><br><br>
+      <button class="cta-button" type="submit">Send Message</button>
+    </form>
+  </section>
 
-    <!-- Footer Section: Copyright and quick links -->
-    <footer>
-        <div class="container">
-            <p>&copy; <span id="currentYear"></span> Ovais The Designer. All rights reserved.</p>
-            <div class="footer-links">
-                <a href="#about">About</a> |
-                <a href="#projects">Projects</a> |
-                <a href="#contact">Contact</a>
-                <!-- Add more footer links if needed -->
-            </div>
-        </div>
-    </footer>
+  <footer>
+    <p>© 2025 Ovais. All rights reserved. | Designed by OvaisTheDesigner</p>
+  </footer>
 
-    <!-- Link to your custom JavaScript file -->
-    <script src="script.js"></script>
 </body>
 </html>
