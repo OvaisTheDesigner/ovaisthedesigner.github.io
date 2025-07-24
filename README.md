@@ -6,10 +6,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary-color: #2c3e50;
-      --secondary-color: #f4f6f8;
-      --accent-color: #0077b6;
-      --text-color: #333;
+      --primary-color: #1e2a38;
+      --secondary-color: #f5f7fa;
+      --accent-color: #005f73;
+      --text-color: #2a2a2a;
+      --card-bg: #ffffff;
     }
     * {
       margin: 0;
@@ -36,7 +37,7 @@
     }
     .hero {
       text-align: center;
-      background: linear-gradient(to bottom, #e8f0f6, #ffffff);
+      background: linear-gradient(to bottom, #f0f4f8, #ffffff);
       padding: 6rem 2rem;
     }
     .hero h1 {
@@ -62,16 +63,28 @@
       gap: 2rem;
     }
     .card {
-      background: white;
+      background: var(--card-bg);
       padding: 1.5rem;
       border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
     }
     footer {
       background: var(--primary-color);
       color: white;
       text-align: center;
       padding: 2rem;
+    }
+    ul {
+      list-style-type: disc;
+      padding-left: 2rem;
+    }
+    form input, form textarea {
+      width: 100%;
+      max-width: 500px;
+      padding: 0.75rem;
+      margin: 0.5rem 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
     }
     @keyframes fadeInUp {
       from {
@@ -97,6 +110,12 @@
     <h2>About Me</h2>
     <p>I’m Ovais, a creative web designer specializing in modern, responsive, and user-friendly websites. With experience in Shopify, Figma, and UX/UI design principles, I help businesses establish a strong digital presence and attract international clients.</p>
     <p>Skills: Shopify, Responsive Design, Figma, UX/UI, Branding, Conversion Optimization.</p>
+  </section>
+
+  <section id="details">
+    <h2>More About Me</h2>
+    <p>With a passion for minimal, functional design, I focus on building websites that aren't just visually appealing but also serve a clear business goal. Whether you're launching a startup or scaling an established brand, I tailor every design to reflect your identity and connect with your audience.</p>
+    <p>Tools I Use: Shopify, Figma, Adobe XD, Framer, Webflow, Canva, and custom no-code/low-code stacks.</p>
   </section>
 
   <section id="projects">
@@ -164,9 +183,9 @@
     <h2>Contact Me</h2>
     <p>Ready to take your brand online professionally? Let's talk!</p>
     <form>
-      <input type="text" placeholder="Your Name" required><br><br>
-      <input type="email" placeholder="Your Email" required><br><br>
-      <textarea placeholder="Your Message" rows="5" required></textarea><br><br>
+      <input type="text" placeholder="Your Name" required><br>
+      <input type="email" placeholder="Your Email" required><br>
+      <textarea placeholder="Your Message" rows="5" required></textarea><br>
       <button class="cta-button" type="submit">Send Message</button>
     </form>
   </section>
