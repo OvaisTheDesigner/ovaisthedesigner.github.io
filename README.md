@@ -152,6 +152,7 @@
     <div class="projects-grid">
       <div class="card">
         <h3>Starter</h3>
+        ![Image](https://github.com/user-attachments/assets/4c272116-d212-46b5-acc5-a9e2fef313d8)
         <p>$299 – One-page design, mobile-friendly, fast delivery.</p>
       </div>
       <div class="card">
