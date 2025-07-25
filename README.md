@@ -106,6 +106,7 @@
       <div class="card">
         <h3>Furniture Store</h3>
         <p>Modern, minimalist layout with strong trust-building elements and seamless navigation.</p>
+        [image alt](https://github.com/OvaisTheDesigner/ovaisthedesigner.github.io/blob/3deb9fdf7024507c7e645ea9aab42ddbde93ae5b/still-xvii-photo-12.jpg)
       </div>
       <div class="card">
         <h3>Clothing Brand</h3>
