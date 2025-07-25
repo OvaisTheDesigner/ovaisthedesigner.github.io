@@ -86,7 +86,6 @@
   </style>
 </head>
 <body>
-[image alt](https://github.com/OvaisTheDesigner/ovaisthedesigner.github.io/blob/main/still-xvii-photo-12.jpg?raw=true)
   <section class="hero">
     <h1>Ovais – Professional Web Designer</h1>
     <p>I design clean, modern Shopify websites that are built to convert. Elevate your online presence with a site that truly represents your brand.</p>
