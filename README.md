@@ -99,7 +99,7 @@
     <p><strong>Skills:</strong> Shopify, Figma, Mobile Design, UX/UI, Conversion-Focused Layouts, Brand Identity, Wireframes, and Modern Styling.</p>
   </section>
 
-  <section id="projects">
+<section id="projects">
     <h2>Featured Projects</h2>
     <div class="projects-grid">
       <div class="card">
